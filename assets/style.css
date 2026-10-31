@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg: #080708;
+    --panel: #110e10;
+    --panel2: #171114;
+    --red: #ed3445;
+    --red-soft: #a92b3a;
+    --text: #f5f1f2;
+    --muted: #a69a9e;
+    --border: rgba(190, 75, 90, 0.22);
+}
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background:
+        radial-gradient(ellipse at 75% 0%, rgba(100, 25, 38, .13), transparent 38%),
+        #080708;
+    color: var(--text);
+}
+
+[data-testid="stHeader"] {
+    background: rgba(8, 7, 8, .96);
+}
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #100c0e, #080708);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] * {
+    color: var(--text);
+}
+
+.block-container {
+    max-width: 1550px;
+    padding-top: 1.2rem;
+    padding-bottom: 3rem;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5px 22px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 30px;
+    background: #1a1013;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.brand-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.brand-name span {
+    color: var(--red);
+}
+
+.brand-subtitle {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 3px;
+}
+
+.system-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 9px 16px;
+    color: #e8e1e3;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #36c98b;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(54, 201, 139, .35);
+}
+
+.page-heading {
+    margin: 20px 0 27px;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.page-heading h1 {
+    color: white;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 9px;
+}
+
+.section-heading {
+    margin: 25px 0 14px;
+}
+
+.section-heading h3 {
+    color: #f5f1f2;
+    font-size: 17px;
+    font-weight: 750;
+    margin: 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.metric-card {
+    background: linear-gradient(145deg, #191316, #100c0e);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 19px;
+    min-height: 120px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+    transition: .2s ease;
+}
+
+.metric-card:hover {
+    border-color: rgba(237, 52, 69, .55);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    color: #b9aaae;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.metric-value {
+    color: #f1e9eb;
+    font-size: 32px;
+    font-weight: 850;
+    margin: 8px 0 3px;
+}
+
+.metric-detail {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.status-info {
+    color: #e7a2ad;
+    background: rgba(190, 75, 90, .12);
+}
+
+.status-success {
+    color: #7cdbac;
+    background: rgba(34, 197, 94, .10);
+}
+
+.status-warning {
+    color: #eacb8c;
+    background: rgba(234, 179, 8, .10);
+}
+
+.status-danger {
+    color: #ef9ba2;
+    background: rgba(239, 68, 68, .10);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 42px 20px;
+    border: 1px dashed var(--border);
+    border-radius: 15px;
+    background: #100c0e;
+}
+
+.empty-icon {
+    color: var(--red);
+    font-size: 36px;
+}
+
+.empty-state h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.empty-state p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.stButton > button {
+    background: linear-gradient(110deg, #a92335, #d93648);
+    color: white;
+    border: 1px solid rgba(237, 52, 69, .35);
+    border-radius: 9px;
+    padding: 10px 19px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(110deg, #bd2d40, #e34757);
+    border-color: #e36a77;
+    box-shadow: 0 0 14px rgba(190, 45, 64, .17);
+    color: white;
+}
+
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"] {
+    background: #100d0f;
+    color: white;
+    border-color: #49343a;
+    border-radius: 9px;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 8px rgba(237, 52, 69, .12);
+}
+
+[data-testid="stFileUploader"] {
+    background: #100d0f;
+    border: 1px dashed #49343a;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+[data-testid="stFileUploader"] section {
+    background: #191518;
+    border-radius: 9px;
+}
+
+[data-testid="stMetric"] {
+    background: #151013;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+[data-testid="stMetricValue"] {
+    color: #f1e9eb;
+}
+
+[data-testid="stExpander"] {
+    background: #110e10;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+[data-testid="stExpander"]:hover {
+    border-color: rgba(237, 52, 69, .5);
+}
+
+[data-testid="stProgressBar"] > div > div {
+    background: var(--red-soft);
+}
+
+hr {
+    border-color: var(--border);
+}
+
+.stMarkdown, .stMarkdown p, label {
+    color: var(--text);
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    background: transparent;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background: rgba(190, 75, 90, .09);
+}
+
+[data-testid="stSidebar"] [aria-checked="true"] {
+    background: rgba(190, 75, 90, .12);
+    border-left: 3px solid var(--red);
+}
+
+footer, #MainMenu {
+    visibility: hidden;
+}
