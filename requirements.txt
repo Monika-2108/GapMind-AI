@@ -7,3 +7,4 @@ pymupdf
 networkx
 plotly
 pandas
+ddgs
